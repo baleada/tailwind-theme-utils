@@ -1,0 +1,51 @@
+{
+  "name": "@baleada/tailwind-config-utils",
+  "version": "0.0.0",
+  "description": "Utility functions for Tailwind config files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/baleada/tailwind-config-utils.git"
+  },
+  "homepage": "https://baleada.netlify.com",
+  "keywords": [
+    "baleada",
+    "tailwind",
+    "tailwind config",
+    "tailwind config utils",
+    "utility functions"
+  ],
+  "author": {
+    "name": "Alex Vipond",
+    "email": "hello@alexvipond.dev",
+    "url": "https://alexvipond.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/baleada/tailwind-config-utils/issues"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.1.2",
+    "ava": "^2.4.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-ava": "^7.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-nuxt": "^0.4.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "ava": {
+    "babel": false,
+    "compileEnhancements": false,
+    "files": [
+      "./tests/**/*.test.js"
+    ],
+    "verbose": true
+  }
+}
