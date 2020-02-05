@@ -3,4 +3,4 @@
 
 # Except these files
 !index.js
-!util
+!util/**/*.js
