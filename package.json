@@ -1,10 +1,11 @@
 {
   "name": "@baleada/tailwind-config-utils",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Utility functions for Tailwind config files.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npx ava"
+    "test": "npx ava",
+    "prepare": "node scripts/prepare.js"
   },
   "repository": {
     "type": "git",
@@ -28,24 +29,23 @@
     "url": "https://gitlab.com/baleada/tailwind-config-utils/issues"
   },
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@baleada/prepare": "^0.1.1",
     "@nuxtjs/eslint-config": "^1.1.2",
-    "ava": "^2.4.0",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "ava": "^3.5.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^13.0.1",
     "eslint-plugin-ava": "^7.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.2.0",
-    "eslint-plugin-nuxt": "^0.4.3",
+    "eslint-plugin-nuxt": "^0.5.2",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
-  },
-  "ava": {
-    "babel": false,
-    "compileEnhancements": false,
-    "files": [
-      "./tests/**/*.test.js"
-    ],
-    "verbose": true
+    "eslint-plugin-standard": "^4.0.1",
+    "rollup-plugin-babel": "^4.4.0"
   }
 }

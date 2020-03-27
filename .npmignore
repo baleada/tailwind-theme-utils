@@ -2,5 +2,5 @@
 *
 
 # Except these files
-!index.js
-!util/**/*.js
+!lib/**/*.js
+

@@ -1,16 +1,17 @@
-const test = require('ava'),
-      midfix = require('../util/midfix'),
-      { fractions } = require('../index.js'),
-      { percent, viewportWidth, viewportHeight } = require('./fractions.stub'),
-      configStub = {
-        '1': 'a',
-        '2': 'b',
-        '3': 'c',
-      }
+import test from 'ava'
+import { toMidfixed } from '../src/util'
+import { fractions } from '../src'
+import { percent, viewportWidth, viewportHeight } from './fractions.stub'
+
+const configStub = {
+  '1': 'a',
+  '2': 'b',
+  '3': 'c',
+}
 
 // Midfix
 test('midfixes values', t => {
-  const midfixed = midfix({ value: 'midfixStub', config: configStub }),
+  const midfixed = toMidfixed({ midfix: 'midfixStub', config: configStub }),
         expected = {
           'midfixStub-1': 'a',
           'midfixStub-2': 'b',
