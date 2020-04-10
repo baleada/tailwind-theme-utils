@@ -1,7 +1,7 @@
 import test from 'ava'
 import { toMidfixed } from '../src/util'
 import { fractions } from '../src'
-import { percent, viewportWidth, viewportHeight } from './fractions.stub'
+import { tailwindPercent, tailwindViewportWidth, tailwindViewportHeight, baleadaPercent, baleadaViewportWidth, baleadaViewportHeight } from './fractions.stub'
 
 const configStub = {
   '1': 'a',
@@ -22,17 +22,32 @@ test('midfixes values', t => {
 })
 
 // Fractions
-test('adds percent fraction classes', t => {
-  const value = fractions('%')
-  t.deepEqual(value, percent)
+test('adds tailwind percent fraction classes', t => {
+  const value = fractions({ unit: '%', mode: 'tailwind' })
+  t.deepEqual(value, tailwindPercent)
 })
 
-test('adds viewport width fraction classes', t => {
-  const value = fractions('vw')
-  t.deepEqual(value, viewportWidth)
+test('adds tailwind viewport width fraction classes', t => {
+  const value = fractions({ unit: 'vw', mode: 'tailwind' })
+  t.deepEqual(value, tailwindViewportWidth)
 })
 
-test('adds viewport height fraction classes', t => {
-  const value = fractions('vh')
-  t.deepEqual(value, viewportHeight)
+test('adds tailwind viewport height fraction classes', t => {
+  const value = fractions({ unit: 'vh', mode: 'tailwind' })
+  t.deepEqual(value, tailwindViewportHeight)
+})
+
+test('adds baleada percent fraction classes', t => {
+  const value = fractions({ unit: '%', mode: 'baleada' })
+  t.deepEqual(value, baleadaPercent)
+})
+
+test('adds baleada viewport width fraction classes', t => {
+  const value = fractions({ unit: 'vw', mode: 'baleada' })
+  t.deepEqual(value, baleadaViewportWidth)
+})
+
+test('adds baleada viewport height fraction classes', t => {
+  const value = fractions({ unit: 'vh', mode: 'baleada' })
+  t.deepEqual(value, baleadaViewportHeight)
 })
