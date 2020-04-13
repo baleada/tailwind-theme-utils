@@ -17,7 +17,7 @@ export function screen(config) {
   return toMidfixed({ midfix: 'screen', config })
 }
 
-export function fractions ({ unit, mode = 'baleada' }) {
+export function fractions ({ unit = '%', mode = 'baleada' }) {
   // TODO: validate unit = %|vw|vh
   // TODO: validate mode = baleada|tailwind
   const fractions = mode === 'baleada' ? baleadaFractions : tailwindFractions,
