@@ -1,6 +1,6 @@
 {
   "name": "@baleada/tailwind-theme-utils",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Utility functions for Tailwind config files.",
   "main": "lib/index.js",
   "scripts": {
