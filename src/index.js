@@ -38,3 +38,10 @@ export function fractions ({ unit, mode = 'baleada' }) {
     [isScreen ? 'screen' : 'full']: `100${unit}`,
   }
 }
+
+export function withoutTailwindFractions (config) {
+  const fractions = tailwindFractions,
+        keysWithoutFractions = Object.keys(config).filter(key => !fractions.includes(key))
+
+  return keysWithoutFractions.reduce((result, key) => ({ ...result, [key]: config[key] }), {})
+}

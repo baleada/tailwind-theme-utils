@@ -1,6 +1,6 @@
 import test from 'ava'
 import { toMidfixed } from '../src/util'
-import { fractions } from '../src'
+import { fractions, withoutTailwindFractions } from '../src'
 import { tailwindPercent, tailwindViewportWidth, tailwindViewportHeight, baleadaPercent, baleadaViewportWidth, baleadaViewportHeight } from './fractions.stub'
 
 const configStub = {
@@ -51,3 +51,13 @@ test('adds baleada viewport height fraction classes', t => {
   const value = fractions({ unit: 'vh', mode: 'baleada' })
   t.deepEqual(value, baleadaViewportHeight)
 })
+
+test('removes Tailwind fraction classes', t => {
+  const value = withoutTailwindFractions({
+    ...fractions({ unit: '%', mode: 'tailwind' }),
+    'full': 'full',
+  })
+  
+  t.deepEqual(value, { full: 'full' })
+})
+

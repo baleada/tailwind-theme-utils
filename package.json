@@ -1,6 +1,6 @@
 {
-  "name": "@baleada/tailwind-config-utils",
-  "version": "0.2.0",
+  "name": "@baleada/tailwind-theme-utils",
+  "version": "0.4.0",
   "description": "Utility functions for Tailwind config files.",
   "main": "lib/index.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/baleada/tailwind-config-utils.git"
+    "url": "git+https://gitlab.com/baleada/tailwind-theme-utils.git"
   },
   "homepage": "https://baleada.netlify.com",
   "keywords": [
     "baleada",
     "tailwind",
-    "tailwind config",
-    "tailwind config utils",
+    "tailwind theme",
+    "tailwind theme utils",
     "utility functions"
   ],
   "author": {
@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/baleada/tailwind-config-utils/issues"
+    "url": "https://gitlab.com/baleada/tailwind-theme-utils/issues"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
@@ -36,7 +36,7 @@
     "@baleada/prepare": "^0.1.1",
     "@nuxtjs/eslint-config": "^1.1.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "ava": "^3.5.1",
+    "ava": "^3.6.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^13.0.1",
