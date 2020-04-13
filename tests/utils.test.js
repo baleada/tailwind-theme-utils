@@ -1,7 +1,8 @@
 import test from 'ava'
 import { toMidfixed } from '../src/util'
-import { fractions, withoutTailwindFractions } from '../src'
+import { fractions, withoutTailwindFractions, withoutColorPalettes } from '../src'
 import { tailwindPercent, tailwindViewportWidth, tailwindViewportHeight, baleadaPercent, baleadaViewportWidth, baleadaViewportHeight } from './fractions.stub'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 const configStub = {
   '1': 'a',
@@ -61,3 +62,8 @@ test('removes Tailwind fraction classes', t => {
   t.deepEqual(value, { full: 'full' })
 })
 
+test('removes color palettes', t => {
+  const value = withoutColorPalettes(defaultTheme.colors)
+
+  t.deepEqual(value, { transparent: 'transparent', black: "#000", white: "#fff" })
+})

@@ -1,6 +1,6 @@
 {
   "name": "@baleada/tailwind-theme-utils",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Utility functions for Tailwind config files.",
   "main": "lib/index.js",
   "scripts": {
@@ -46,6 +46,7 @@
     "eslint-plugin-nuxt": "^0.5.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup-plugin-babel": "^4.4.0",
+    "tailwindcss": "^1.2.0"
   }
 }

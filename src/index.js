@@ -45,3 +45,10 @@ export function withoutTailwindFractions (config) {
 
   return keysWithoutFractions.reduce((result, key) => ({ ...result, [key]: config[key] }), {})
 }
+
+export function withoutColorPalettes (colors) {
+  const hues = Object.keys(colors)
+  return hues
+    .filter(hue => typeof colors[hue] === 'string')
+    .reduce((individualColors, hue) => ({ ...individualColors, [hue]: colors[hue] }), {})
+}
