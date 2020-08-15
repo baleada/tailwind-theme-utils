@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/baleada/tailwind-theme-utils.git"
+    "url": "git+https://github.com/baleada/tailwind-theme-utils.git"
   },
   "homepage": "https://baleada.netlify.com",
   "keywords": [
@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/baleada/tailwind-theme-utils/issues"
+    "url": "https://github.com/baleada/tailwind-theme-utils/issues"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
