@@ -9,7 +9,7 @@ const presets = [
   ],
 ],
 plugins = [
-  
+  '@babel/plugin-transform-runtime'
 ]
 
 module.exports = { presets, plugins }

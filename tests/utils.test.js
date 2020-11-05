@@ -24,38 +24,38 @@ test('midfixes values', t => {
 
 // Fractions
 test('adds tailwind percent fraction classes', t => {
-  const value = fractions({ unit: '%', mode: 'tailwind' })
+  const value = fractions({ unit: '%', set: 'tailwind' })
   t.deepEqual(value, tailwindPercent)
 })
 
 test('adds tailwind viewport width fraction classes', t => {
-  const value = fractions({ unit: 'vw', mode: 'tailwind' })
+  const value = fractions({ unit: 'vw', set: 'tailwind' })
   t.deepEqual(value, tailwindViewportWidth)
 })
 
 test('adds tailwind viewport height fraction classes', t => {
-  const value = fractions({ unit: 'vh', mode: 'tailwind' })
+  const value = fractions({ unit: 'vh', set: 'tailwind' })
   t.deepEqual(value, tailwindViewportHeight)
 })
 
 test('adds baleada percent fraction classes', t => {
-  const value = fractions({ unit: '%', mode: 'baleada' })
+  const value = fractions({ unit: '%', set: 'baleada' })
   t.deepEqual(value, baleadaPercent)
 })
 
 test('adds baleada viewport width fraction classes', t => {
-  const value = fractions({ unit: 'vw', mode: 'baleada' })
+  const value = fractions({ unit: 'vw', set: 'baleada' })
   t.deepEqual(value, baleadaViewportWidth)
 })
 
 test('adds baleada viewport height fraction classes', t => {
-  const value = fractions({ unit: 'vh', mode: 'baleada' })
+  const value = fractions({ unit: 'vh', set: 'baleada' })
   t.deepEqual(value, baleadaViewportHeight)
 })
 
 test('removes Tailwind fraction classes', t => {
   const value = withoutTailwindFractions({
-    ...fractions({ unit: '%', mode: 'tailwind' }),
+    ...fractions({ unit: '%', set: 'tailwind' }),
     'full': 'full',
   })
   
