@@ -1,20 +1,20 @@
 import { toMidfixed } from './extracted'
-import type { SimpleConfig } from './extracted'
+import type { Midfixable } from './extracted'
 import { TailwindThemeColors } from 'tailwindcss/tailwind-config'
 
-export function rem (config: SimpleConfig): SimpleConfig {
+export function rem (config: Midfixable): Midfixable {
   return toMidfixed({ midfix: 'rem', config })
 }
 
-export function em (config: SimpleConfig): SimpleConfig {
+export function em (config: Midfixable): Midfixable {
   return toMidfixed({ midfix: 'em', config })
 }
 
-export function px (config: SimpleConfig): SimpleConfig {
+export function px (config: Midfixable): Midfixable {
   return toMidfixed({ midfix: 'px', config })
 }
 
-export function screen(config: SimpleConfig): SimpleConfig {
+export function screen(config: Midfixable): Midfixable {
   return toMidfixed({ midfix: 'screen', config })
 }
 

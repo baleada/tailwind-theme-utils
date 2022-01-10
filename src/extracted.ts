@@ -1,6 +1,6 @@
-export type SimpleConfig = { [suffix: string]: string }
+export type Midfixable = { [suffix: string]: string }
 
-export function toMidfixed ({ midfix, config }: { midfix: string, config: SimpleConfig }): SimpleConfig {
+export function toMidfixed ({ midfix, config }: { midfix: string, config: Midfixable }): Midfixable {
   return Object.keys(config)
     .reduce(
       (midfixed, value) => ({
