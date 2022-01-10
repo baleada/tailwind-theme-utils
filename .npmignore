@@ -3,5 +3,7 @@
 
 # Except these files
 !lib/**/*.js
+!lib/**/*.ts
 !lib/**/*.cjs
+
 
